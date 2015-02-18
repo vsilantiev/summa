@@ -1,0 +1,1584 @@
+
+*** Running vivado
+    with args -log v6pcieDMA.vds -m64 -mode batch -messageDb vivado.pb -source v6pcieDMA.tcl
+
+
+****** Vivado v2014.2 (64-bit)
+  **** SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
+  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source v6pcieDMA.tcl
+# set_param gui.test TreeTableDev
+# set_param xicom.use_bs_reader 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Labtools 27-147} -limit 4294967295
+# create_project -in_memory -part xc7a200tfbg484-1
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+# set_property target_language VHDL [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp]
+# add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp]
+# add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp]
+# add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp]
+# read_ip /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.2/data/ip'.
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
+# set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
+# set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+# set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+# read_verilog -library xil_defaultlib /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v]
+# read_vhdl -library xil_defaultlib {
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6abb64Package_efifo_elink.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FF_tagram64x36.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/RxIn_Delays.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd
+#   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd
+# }
+# read_xdc /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc
+# set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# read_xdc dont_buffer.xdc
+# set_property used_in_implementation false [get_files dont_buffer.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir /home/vladimir/TESTDIFFAC/cernv1/cernv1.cache/wt [current_project]
+# set_property parent.project_dir /home/vladimir/TESTDIFFAC/cernv1 [current_project]
+# catch { write_hwdef -file v6pcieDMA.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top v6pcieDMA -part xc7a200tfbg484-1
+Command: synth_design -top v6pcieDMA -part xc7a200tfbg484-1
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 791.602 ; gain = 158.125
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port rst_in is neither a static name nor a globally static expression [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1597]
+INFO: [Synth 8-638] synthesizing module 'v6pcieDMA' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:70]
+	Parameter pcieLanes bound to: 4 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'sys_reset_n_ibuf' to cell 'IBUF' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:950]
+	Parameter CLKCM_CFG bound to: 1 - type: bool 
+	Parameter CLKRCV_TRST bound to: 1 - type: bool 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-113] binding component instance 'refclk_ibuf' to cell 'IBUFDS_GTE2' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:957]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'trn_lnk_up_n_int_i' to cell 'FDCP' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1015]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'trn_reset_n_i' to cell 'FDCP' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1028]
+	Parameter PL_FAST_TRAIN bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'v6_pcie_v1_7_x4' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:73' bound to instance 'pcieCore' of component 'v6_pcie_v1_7_x4' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1046]
+INFO: [Synth 8-638] synthesizing module 'v6_pcie_v1_7_x4__parameterized0' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:219]
+	Parameter PL_FAST_TRAIN bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'pcie_7x_0' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/pcie_7x_0_stub.vhdl:5' bound to instance 'v7_pcie_i' of component 'pcie_7x_0' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:621]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/pcie_7x_0_stub.vhdl:186]
+WARNING: [Synth 8-3848] Net trn_tcfg_req_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:111]
+WARNING: [Synth 8-3848] Net trn_terr_drop_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:112]
+WARNING: [Synth 8-3848] Net cfg_do in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:142]
+WARNING: [Synth 8-3848] Net cfg_rd_wr_done in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:592]
+WARNING: [Synth 8-3848] Net cfg_err_cpl_rdy_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:159]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_pme_en in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:185]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_pme_status in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:186]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_powerstate in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:187]
+WARNING: [Synth 8-3848] Net pl_link_gen2_capable in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:195]
+WARNING: [Synth 8-3848] Net pl_link_upcfg_capable in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:197]
+WARNING: [Synth 8-3848] Net pl_sel_link_rate in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:200]
+WARNING: [Synth 8-3848] Net pl_sel_link_width in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:201]
+WARNING: [Synth 8-3848] Net trn_tecrc_gen in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:594]
+WARNING: [Synth 8-3848] Net rx_np_req in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:521]
+WARNING: [Synth 8-3848] Net cfg_mgmt_wr_readonly in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:574]
+WARNING: [Synth 8-3848] Net cfg_err_atomic_egress_blocked in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:542]
+WARNING: [Synth 8-3848] Net cfg_err_internal_cor in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:543]
+WARNING: [Synth 8-3848] Net cfg_err_malformed in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:544]
+WARNING: [Synth 8-3848] Net cfg_err_mc_blocked in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:545]
+WARNING: [Synth 8-3848] Net cfg_err_poisoned in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:546]
+WARNING: [Synth 8-3848] Net cfg_err_norecovery in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:547]
+WARNING: [Synth 8-3848] Net cfg_err_acs in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:548]
+WARNING: [Synth 8-3848] Net cfg_err_internal_uncor in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:549]
+WARNING: [Synth 8-3848] Net cfg_pm_halt_aspm_l0s in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:558]
+WARNING: [Synth 8-3848] Net cfg_pm_halt_aspm_l1 in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:559]
+WARNING: [Synth 8-3848] Net cfg_pm_force_state_en in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:560]
+WARNING: [Synth 8-3848] Net cfg_pm_force_state in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:561]
+WARNING: [Synth 8-3848] Net cfg_interrupt_stat in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:553]
+WARNING: [Synth 8-3848] Net cfg_pciecap_interrupt_msgnum in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:554]
+WARNING: [Synth 8-3848] Net cfg_err_aer_headerlog in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:564]
+WARNING: [Synth 8-3848] Net cfg_aer_interrupt_msgnum in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:565]
+INFO: [Synth 8-256] done synthesizing module 'v6_pcie_v1_7_x4__parameterized0' (1#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:219]
+INFO: [Synth 8-3491] module 'tlpControl' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:45' bound to instance 'theTlpControl' of component 'tlpControl' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+INFO: [Synth 8-638] synthesizing module 'tlpControl' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:273]
+INFO: [Synth 8-3491] module 'rx_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:42' bound to instance 'rx_Itf' of component 'rx_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:1132]
+INFO: [Synth 8-638] synthesizing module 'rx_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:232]
+INFO: [Synth 8-3491] module 'RxIn_Delay' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/RxIn_Delays.vhd:35' bound to instance 'Rx_Input_Delays' of component 'RxIn_Delay' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:727]
+INFO: [Synth 8-638] synthesizing module 'RxIn_Delay' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/RxIn_Delays.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'RxIn_Delay' (2#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/RxIn_Delays.vhd:102]
+INFO: [Synth 8-3491] module 'rx_MRd_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:41' bound to instance 'MRd_Channel' of component 'rx_MRd_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:793]
+INFO: [Synth 8-638] synthesizing module 'rx_MRd_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:87]
+INFO: [Synth 8-226] default block is never used [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:254]
+INFO: [Synth 8-3491] module 'v6_sfifo_15x128' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_sfifo_15x128_stub.vhdl:5' bound to instance 'pioCplD_Buffer' of component 'v6_sfifo_15x128' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:615]
+INFO: [Synth 8-638] synthesizing module 'v6_sfifo_15x128' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_sfifo_15x128_stub.vhdl:21]
+INFO: [Synth 8-226] default block is never used [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:649]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rd_r1_reg' and it is trimmed from '64' to '58' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:220]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rbar_hit_n_r1_reg' and it is trimmed from '7' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:221]
+INFO: [Synth 8-256] done synthesizing module 'rx_MRd_Transact' (3#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd:87]
+INFO: [Synth 8-3491] module 'rx_MWr_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:39' bound to instance 'MWr_Channel' of component 'rx_MWr_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:832]
+INFO: [Synth 8-638] synthesizing module 'rx_MWr_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:103]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rrem_n_r1_reg' and it is trimmed from '8' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:254]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rbar_hit_n_r1_reg' and it is trimmed from '7' to '3' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'rx_MWr_Transact' (4#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:103]
+INFO: [Synth 8-3491] module 'rx_CplD_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:39' bound to instance 'CplD_Channel' of component 'rx_CplD_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:889]
+INFO: [Synth 8-638] synthesizing module 'rx_CplD_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:127]
+INFO: [Synth 8-3491] module 'FF_TagRam64x36' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FF_tagram64x36.vhd:33' bound to instance 'dspTag_BRAM' of component 'FF_TagRam64x36' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:1247]
+INFO: [Synth 8-638] synthesizing module 'FF_TagRam64x36' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FF_tagram64x36.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'FF_TagRam64x36' (5#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FF_tagram64x36.vhd:47]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rrem_n_r4_reg' and it is trimmed from '8' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:590]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rrem_n_r3_reg' and it is trimmed from '8' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:589]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rrem_n_r2_reg' and it is trimmed from '8' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:588]
+WARNING: [Synth 8-3936] Found unconnected internal register 'trn_rrem_n_r1_reg' and it is trimmed from '8' to '4' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:587]
+INFO: [Synth 8-256] done synthesizing module 'rx_CplD_Transact' (6#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd:127]
+INFO: [Synth 8-3491] module 'usDMA_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:41' bound to instance 'Upstream_DMA_Engine' of component 'usDMA_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:970]
+INFO: [Synth 8-638] synthesizing module 'usDMA_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:106]
+INFO: [Synth 8-3491] module 'DMA_Calculate' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd:38' bound to instance 'us_DMA_Calculation' of component 'DMA_Calculate' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:377]
+INFO: [Synth 8-638] synthesizing module 'DMA_Calculate' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd:106]
+INFO: [Synth 8-226] default block is never used [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd:541]
+INFO: [Synth 8-256] done synthesizing module 'DMA_Calculate' (7#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd:106]
+INFO: [Synth 8-3491] module 'DMA_FSM' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:36' bound to instance 'us_DMA_StateMachine' of component 'DMA_FSM' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:439]
+INFO: [Synth 8-638] synthesizing module 'DMA_FSM' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:112]
+INFO: [Synth 8-226] default block is never used [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:297]
+INFO: [Synth 8-256] done synthesizing module 'DMA_FSM' (8#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:112]
+INFO: [Synth 8-3491] module 'v6_sfifo_15x128' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_sfifo_15x128_stub.vhdl:5' bound to instance 'US_TLP_Buffer' of component 'v6_sfifo_15x128' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:565]
+INFO: [Synth 8-256] done synthesizing module 'usDMA_Transact' (9#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd:106]
+INFO: [Synth 8-3491] module 'dsDMA_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:43' bound to instance 'Downstream_DMA_Engine' of component 'dsDMA_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:1030]
+INFO: [Synth 8-638] synthesizing module 'dsDMA_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:112]
+INFO: [Synth 8-3491] module 'DMA_Calculate' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd:38' bound to instance 'ds_DMA_Calculation' of component 'DMA_Calculate' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:382]
+INFO: [Synth 8-3491] module 'DMA_FSM' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:36' bound to instance 'ds_DMA_StateMachine' of component 'DMA_FSM' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:440]
+INFO: [Synth 8-3491] module 'v6_sfifo_15x128' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_sfifo_15x128_stub.vhdl:5' bound to instance 'DMA_DSP_Buffer' of component 'v6_sfifo_15x128' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:671]
+INFO: [Synth 8-256] done synthesizing module 'dsDMA_Transact' (10#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:112]
+INFO: [Synth 8-3491] module 'Interrupts' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd:35' bound to instance 'Intrpt_Handle' of component 'Interrupts' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:1096]
+INFO: [Synth 8-638] synthesizing module 'Interrupts' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd:71]
+WARNING: [Synth 8-3848] Net Msg_Tag_Lo in module/entity Interrupts does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'Interrupts' (11#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'rx_Transact' (12#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_Transact.vhd:232]
+INFO: [Synth 8-3491] module 'tx_Transact' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:45' bound to instance 'tx_Itf' of component 'tx_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:1322]
+INFO: [Synth 8-638] synthesizing module 'tx_Transact' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:135]
+INFO: [Synth 8-3491] module 'tx_Mem_Reader' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd:34' bound to instance 'ABB_Tx_MReader' of component 'tx_Mem_Reader' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:477]
+INFO: [Synth 8-638] synthesizing module 'tx_Mem_Reader' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'tx_Mem_Reader' (13#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd:90]
+INFO: [Synth 8-3491] module 'v6_mBuf_128x72' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_mBuf_128x72_stub.vhdl:5' bound to instance 'ABB_Tx_MBuffer' of component 'v6_mBuf_128x72' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:531]
+INFO: [Synth 8-638] synthesizing module 'v6_mBuf_128x72' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_mBuf_128x72_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'Tx_Output_Arbitor' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:40' bound to instance 'O_Arbitration' of component 'Tx_Output_Arbitor' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:570]
+INFO: [Synth 8-638] synthesizing module 'Tx_Output_Arbitor' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:54]
+INFO: [Synth 8-226] default block is never used [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:154]
+WARNING: [Synth 8-614] signal 'Prior_Init_Value' is read in the process but is not in the sensitivity list [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:276]
+WARNING: [Synth 8-614] signal 'Prior_Init_Value' is read in the process but is not in the sensitivity list [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:276]
+WARNING: [Synth 8-614] signal 'Prior_Init_Value' is read in the process but is not in the sensitivity list [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:276]
+WARNING: [Synth 8-614] signal 'Prior_Init_Value' is read in the process but is not in the sensitivity list [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:276]
+INFO: [Synth 8-256] done synthesizing module 'Tx_Output_Arbitor' (14#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'tx_Transact' (15#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:135]
+INFO: [Synth 8-3491] module 'Regs_Group' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:38' bound to instance 'Memory_Space' of component 'Regs_Group' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:1416]
+INFO: [Synth 8-638] synthesizing module 'Regs_Group' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:259]
+WARNING: [Synth 8-3936] Found unconnected internal register 'eb_FIFO_Status_r1_reg' and it is trimmed from '64' to '32' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:913]
+WARNING: [Synth 8-3936] Found unconnected internal register 'H2B_FIFO_Status_r1_reg' and it is trimmed from '64' to '32' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:920]
+WARNING: [Synth 8-3936] Found unconnected internal register 'B2H_FIFO_Status_r1_reg' and it is trimmed from '64' to '32' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:927]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Regs_WrAddr_r1_reg' and it is trimmed from '16' to '14' bits. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:938]
+WARNING: [Synth 8-3848] Net icap_BUSY in module/entity Regs_Group does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:512]
+INFO: [Synth 8-256] done synthesizing module 'Regs_Group' (16#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'tlpControl' (17#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tlpControl.vhd:273]
+INFO: [Synth 8-3491] module 'eb_wrapper' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:33' bound to instance 'queue_buffer0' of component 'eb_wrapper' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1417]
+INFO: [Synth 8-638] synthesizing module 'eb_wrapper' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:74]
+	Parameter C_ASYNFIFO_WIDTH bound to: 72 - type: integer 
+INFO: [Synth 8-3491] module 'v6_eb_fifo_counted_resized' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_eb_fifo_counted_resized_stub.vhdl:5' bound to instance 'U0_B2H' of component 'v6_eb_fifo_counted_resized' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'v6_eb_fifo_counted_resized' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/v6_eb_fifo_counted_resized_stub.vhdl:25]
+WARNING: [Synth 8-3848] Net H2B_wr_pfull in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:43]
+WARNING: [Synth 8-3848] Net H2B_wr_full in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:44]
+WARNING: [Synth 8-3848] Net H2B_wr_data_count_wire in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:103]
+WARNING: [Synth 8-3848] Net resized_H2B_rd_dout in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:108]
+WARNING: [Synth 8-3848] Net H2B_rd_pempty in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:49]
+WARNING: [Synth 8-3848] Net H2B_rd_empty in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:50]
+WARNING: [Synth 8-3848] Net H2B_rd_data_count_wire in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:99]
+WARNING: [Synth 8-3848] Net H2B_rd_valid in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'eb_wrapper' (18#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:74]
+INFO: [Synth 8-3491] module 'ADC16BIT' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:1' bound to instance 'ADCMAIN' of component 'ADC16BIT' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1509]
+INFO: [Synth 8-638] synthesizing module 'ADC16BIT' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:1]
+	Parameter IDELAY_SIGNAL_GROUP bound to: adc0_data_delay_group - type: string 
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IDDR' [/opt/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:12123]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter SRTYPE bound to: ASYNC - type: string 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'IDDR' (19#1) [/opt/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:12123]
+WARNING: [Synth 8-3848] Net reg08_rd in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:188]
+WARNING: [Synth 8-3848] Net reg08_rv in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:189]
+WARNING: [Synth 8-3848] Net reg14_rd in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:203]
+WARNING: [Synth 8-3848] Net reg14_rv in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:204]
+INFO: [Synth 8-256] done synthesizing module 'ADC16BIT' (20#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:1]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'ADCCLK_IBUF' to cell 'IBUFG' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1590]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Inst_clckinvert' of component 'clk_wiz_0' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1595]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/realtime/clk_wiz_0_stub.vhdl:16]
+WARNING: [Synth 8-3848] Net eb_we_up in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:474]
+WARNING: [Synth 8-3848] Net daq_rstop in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:834]
+WARNING: [Synth 8-3848] Net DDR_Ready in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:364]
+WARNING: [Synth 8-3848] Net DDR_wr_full in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:350]
+WARNING: [Synth 8-3848] Net DDR_rdc_full in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:358]
+WARNING: [Synth 8-3848] Net DDR_FIFO_Empty in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:361]
+WARNING: [Synth 8-3848] Net DDR_FIFO_RdQout in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:362]
+WARNING: [Synth 8-3848] Net clk_200MHz in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:924]
+INFO: [Synth 8-256] done synthesizing module 'v6pcieDMA' (21#1) [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 884.484 ; gain = 251.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rv to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[31] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[30] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[29] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[28] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[27] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[26] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[25] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[24] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[23] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[22] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[21] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[20] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[19] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[18] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[17] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[16] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[15] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[14] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[13] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[12] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[11] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[10] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[9] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[8] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[7] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[6] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[5] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[4] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[3] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[2] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[1] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:dlm_rd[0] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:Link_Buf_full to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_Ready to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_wr_full to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_rdc_full to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_Empty to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[63] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[62] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[61] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[60] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[59] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[58] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[57] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[56] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[55] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[54] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[53] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[52] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[51] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[50] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[49] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[48] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[47] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[46] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[45] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[44] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[43] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[42] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[41] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[40] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[39] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[38] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[37] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[36] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[35] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[34] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[33] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[32] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[31] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[30] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[29] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[28] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[27] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[26] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[25] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[24] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[23] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[22] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[21] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[20] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[19] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[18] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[17] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[16] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[15] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[14] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[13] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[12] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[11] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[10] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[9] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[8] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[7] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[6] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[5] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[4] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[3] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+WARNING: [Synth 8-3295] tying undriven pin theTlpControl:DDR_FIFO_RdQout[2] to constant 0 [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:1195]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/PinFunctions.xml...
+Loading package from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/fbg484/Package.xml
+Loading io standards from /opt/Xilinx/Vivado/2014.2/data/./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ConfigModes.xml
+
+Processing XDC Constraints
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/dcp/pcie_7x_0_in_context.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/dcp/pcie_7x_0_in_context.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/dcp_5/clk_wiz_0_in_context.xdc] for cell 'Inst_clckinvert'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/.Xil/Vivado-10759-ubuntu/dcp_5/clk_wiz_0_in_context.xdc] for cell 'Inst_clckinvert'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ADCCLK'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc:384]
+WARNING: [Vivado 12-507] No nets matched 'ADCCLK1'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc:388]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/v6pcieDMA_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/v6pcieDMA_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/v6pcieDMA_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 2 instances
+  IBUFG => IBUF: 1 instances
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1207.934 ; gain = 574.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property BUFFER_TYPE = NONE for ADCCLK. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for ADCCLK1. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for ADCCLK2. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txp[3]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txp[2]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txp[1]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txp[0]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txn[3]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txn[2]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txn[1]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_txn[0]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxp[3]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxp[2]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxp[1]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxp[0]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxn[3]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxn[2]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxn[1]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for pci_exp_rxn[0]. (constraint file  /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/dont_buffer.xdc, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1207.934 ; gain = 574.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1207.934 ; gain = 574.457
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'FSM_TLP_Cnt_reg' in module 'RxIn_Delay'
+INFO: [Synth 8-4471] merging register 'eb_FIFO_wsof_i_reg' into 'eb_FIFO_we_i_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:196]
+INFO: [Synth 8-4471] merging register 'eb_FIFO_weof_i_reg' into 'eb_FIFO_we_i_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd:197]
+INFO: [Synth 8-802] inferred FSM for state register 'RxMWrTrn_State_reg' in module 'rx_MWr_Transact'
+INFO: [Synth 8-802] inferred FSM for state register 'RxCplDTrn_State_reg' in module 'rx_CplD_Transact'
+INFO: [Synth 8-4471] merging register 'DMA_Cmd_Ack_i_reg' into 'State_Is_LoadParam_i_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/DMA_FSM.vhd:245]
+INFO: [Synth 8-802] inferred FSM for state register 'BusyDone_State_reg' in module 'DMA_FSM'
+INFO: [Synth 8-802] inferred FSM for state register 'FSM_REQ_us_reg' in module 'usDMA_Transact'
+INFO: [Synth 8-4471] merging register 'dsFC_stop_2048B_reg' into 'dsFC_stop_4096B_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd:760]
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Cfg_Irpt.edge_Intrpt_State_reg' in module 'Interrupts'
+INFO: [Synth 8-4471] merging register 'DDR_rdc_v_i_reg' into 'DDR_rdc_sof_i_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd:218]
+INFO: [Synth 8-802] inferred FSM for state register 'TxMReader_State_reg' in module 'tx_Mem_Reader'
+INFO: [Synth 8-4471] merging register 'pio_FC_stop_i_reg' into 'us_FC_stop_i_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/tx_Transact.vhd:405]
+INFO: [Synth 8-802] inferred FSM for state register 'TxTrn_State_reg' in module 'tx_Transact'
+INFO: [Synth 8-4471] merging register 'reg02_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:360]
+INFO: [Synth 8-4471] merging register 'reg03_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:369]
+INFO: [Synth 8-4471] merging register 'reg04_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:377]
+INFO: [Synth 8-4471] merging register 'reg05_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:389]
+INFO: [Synth 8-4471] merging register 'reg06_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:403]
+INFO: [Synth 8-4471] merging register 'reg07_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:409]
+INFO: [Synth 8-4471] merging register 'reg09_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:425]
+INFO: [Synth 8-4471] merging register 'reg10_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:431]
+INFO: [Synth 8-4471] merging register 'reg11_rd_reg[31:0]' into 'reg10_rd_reg[31:0]' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:432]
+INFO: [Synth 8-4471] merging register 'reg11_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:433]
+INFO: [Synth 8-4471] merging register 'reg12_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:435]
+INFO: [Synth 8-4471] merging register 'reg13_rd_reg[31:0]' into 'reg12_rd_reg[31:0]' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:436]
+INFO: [Synth 8-4471] merging register 'reg13_rv_reg' into 'reg01_rv_reg' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:437]
+INFO: [Synth 8-3354] encoded FSM with state register 'FSM_TLP_Cnt_reg' using encoding 'one-hot' in module 'RxIn_Delay'
+INFO: [Synth 8-3354] encoded FSM with state register 'RxMWrTrn_State_reg' using encoding 'one-hot' in module 'rx_MWr_Transact'
+INFO: [Synth 8-3354] encoded FSM with state register 'RxCplDTrn_State_reg' using encoding 'one-hot' in module 'rx_CplD_Transact'
+INFO: [Synth 8-3354] encoded FSM with state register 'BusyDone_State_reg' using encoding 'one-hot' in module 'DMA_FSM'
+INFO: [Synth 8-3354] encoded FSM with state register 'FSM_REQ_us_reg' using encoding 'one-hot' in module 'usDMA_Transact'
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Cfg_Irpt.edge_Intrpt_State_reg' using encoding 'one-hot' in module 'Interrupts'
+WARNING: [Synth 8-3848] Net Msg_Tag_Lo in module/entity Interrupts does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Interrupts.vhd:96]
+INFO: [Synth 8-3354] encoded FSM with state register 'TxMReader_State_reg' using encoding 'one-hot' in module 'tx_Mem_Reader'
+INFO: [Synth 8-3354] encoded FSM with state register 'TxTrn_State_reg' using encoding 'one-hot' in module 'tx_Transact'
+WARNING: [Synth 8-3848] Net icap_BUSY in module/entity Regs_Group does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/Registers.vhd:512]
+WARNING: [Synth 8-3848] Net reg08_rd in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:188]
+WARNING: [Synth 8-3848] Net reg08_rv in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:189]
+WARNING: [Synth 8-3848] Net reg14_rd in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:203]
+WARNING: [Synth 8-3848] Net reg14_rv in module/entity ADC16BIT does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/xise/Emul.v:204]
+WARNING: [Synth 8-3848] Net trn_tcfg_req_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:111]
+WARNING: [Synth 8-3848] Net trn_terr_drop_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:112]
+WARNING: [Synth 8-3848] Net cfg_do in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:142]
+WARNING: [Synth 8-3848] Net cfg_rd_wr_done in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:592]
+WARNING: [Synth 8-3848] Net cfg_err_cpl_rdy_n in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:159]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_pme_en in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:185]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_pme_status in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:186]
+WARNING: [Synth 8-3848] Net cfg_pmcsr_powerstate in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:187]
+WARNING: [Synth 8-3848] Net pl_link_gen2_capable in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:195]
+WARNING: [Synth 8-3848] Net pl_link_upcfg_capable in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:197]
+WARNING: [Synth 8-3848] Net pl_sel_link_rate in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:200]
+WARNING: [Synth 8-3848] Net pl_sel_link_width in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:201]
+WARNING: [Synth 8-3848] Net trn_tecrc_gen in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:594]
+WARNING: [Synth 8-3848] Net rx_np_req in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:521]
+WARNING: [Synth 8-3848] Net cfg_mgmt_wr_readonly in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:574]
+WARNING: [Synth 8-3848] Net cfg_err_atomic_egress_blocked in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:542]
+WARNING: [Synth 8-3848] Net cfg_err_internal_cor in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:543]
+WARNING: [Synth 8-3848] Net cfg_err_malformed in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:544]
+WARNING: [Synth 8-3848] Net cfg_err_mc_blocked in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:545]
+WARNING: [Synth 8-3848] Net cfg_err_poisoned in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:546]
+WARNING: [Synth 8-3848] Net cfg_err_norecovery in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:547]
+WARNING: [Synth 8-3848] Net cfg_err_acs in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:548]
+WARNING: [Synth 8-3848] Net cfg_err_internal_uncor in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:549]
+WARNING: [Synth 8-3848] Net cfg_pm_halt_aspm_l0s in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:558]
+WARNING: [Synth 8-3848] Net cfg_pm_halt_aspm_l1 in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:559]
+WARNING: [Synth 8-3848] Net cfg_pm_force_state_en in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:560]
+WARNING: [Synth 8-3848] Net cfg_pm_force_state in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:561]
+WARNING: [Synth 8-3848] Net cfg_interrupt_stat in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:553]
+WARNING: [Synth 8-3848] Net cfg_pciecap_interrupt_msgnum in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:554]
+WARNING: [Synth 8-3848] Net cfg_err_aer_headerlog in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:564]
+WARNING: [Synth 8-3848] Net cfg_aer_interrupt_msgnum in module/entity v6_pcie_v1_7_x4__parameterized0 does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd:565]
+WARNING: [Synth 8-3848] Net H2B_wr_pfull in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:43]
+WARNING: [Synth 8-3848] Net H2B_wr_full in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:44]
+WARNING: [Synth 8-3848] Net H2B_wr_data_count_wire in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:103]
+WARNING: [Synth 8-3848] Net resized_H2B_rd_dout in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:108]
+WARNING: [Synth 8-3848] Net H2B_rd_pempty in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:49]
+WARNING: [Synth 8-3848] Net H2B_rd_empty in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:50]
+WARNING: [Synth 8-3848] Net H2B_rd_data_count_wire in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:99]
+WARNING: [Synth 8-3848] Net H2B_rd_valid in module/entity eb_wrapper does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd:52]
+WARNING: [Synth 8-3848] Net eb_we_up in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:474]
+WARNING: [Synth 8-3848] Net daq_rstop in module/entity v6pcieDMA does not have driver. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd:834]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |rx_Transact__GB0 |           1|     26932|
+|2     |rx_Transact__GB1 |           1|     15427|
+|3     |tlpControl__GC0  |           1|     28894|
+|4     |v6pcieDMA__GC0   |           1|      3076|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     64 Bit       Adders := 2     
+	   2 Input     57 Bit       Adders := 2     
+	   2 Input     48 Bit       Adders := 12    
+	   3 Input     48 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     22 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 8     
+	   2 Input     16 Bit       Adders := 10    
+	   2 Input     14 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 12    
+	               73 Bit    Registers := 1     
+	               72 Bit    Registers := 1     
+	               64 Bit    Registers := 71    
+	               60 Bit    Registers := 4     
+	               58 Bit    Registers := 1     
+	               48 Bit    Registers := 4     
+	               36 Bit    Registers := 71    
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 49    
+	               30 Bit    Registers := 1     
+	               26 Bit    Registers := 2     
+	               17 Bit    Registers := 10    
+	               16 Bit    Registers := 7     
+	               15 Bit    Registers := 4     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 8     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 9     
+	                4 Bit    Registers := 18    
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 366   
++---Muxes : 
+	   3 Input    128 Bit        Muxes := 2     
+	   2 Input    128 Bit        Muxes := 15    
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 2     
+	   4 Input     64 Bit        Muxes := 2     
+	   6 Input     64 Bit        Muxes := 1     
+	   5 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 92    
+	   8 Input     64 Bit        Muxes := 1     
+	  15 Input     64 Bit        Muxes := 2     
+	   7 Input     64 Bit        Muxes := 3     
+	  64 Input     36 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 133   
+	   2 Input     33 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 165   
+	   2 Input     30 Bit        Muxes := 3     
+	   2 Input     26 Bit        Muxes := 2     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 16    
+	  39 Input     15 Bit        Muxes := 1     
+	  51 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 2     
+	   5 Input     12 Bit        Muxes := 1     
+	  28 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  15 Input     10 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 13    
+	   2 Input      8 Bit        Muxes := 7     
+	   3 Input      8 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 2     
+	  19 Input      7 Bit        Muxes := 1     
+	  13 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 4     
+	  64 Input      6 Bit        Muxes := 1     
+	   9 Input      6 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 2     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   3 Input      4 Bit        Muxes := 4     
+	   8 Input      3 Bit        Muxes := 12    
+	   6 Input      3 Bit        Muxes := 1     
+	  15 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 98    
+	   7 Input      3 Bit        Muxes := 3     
+	   7 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 7     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 41    
+	   5 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 431   
+	   6 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 17    
+	  15 Input      1 Bit        Muxes := 19    
+	   3 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 28    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module v6pcieDMA 
+Detailed RTL Component Info : 
+Module RxIn_Delay 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+Module rx_MRd_Transact 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 3     
+	               58 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 11    
+	   3 Input    128 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module rx_MWr_Transact 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 6     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   5 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   8 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 3     
+	   6 Input     64 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 1     
+	   5 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  28 Input     11 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 8     
+Module FF_TagRam64x36 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	               36 Bit    Registers := 66    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  64 Input     36 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 128   
+	  64 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 128   
+Module rx_CplD_Transact 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 8     
+	               36 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 4     
+	   7 Input     64 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   8 Input     16 Bit        Muxes := 2     
+	  51 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module Interrupts 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 3     
+	   9 Input      6 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+Module DMA_Calculate 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     57 Bit       Adders := 1     
+	   2 Input     48 Bit       Adders := 6     
+	   3 Input     48 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 4     
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 8     
+	               48 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
+	               17 Bit    Registers := 5     
+	               13 Bit    Registers := 3     
+	               12 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 17    
+	   2 Input     33 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 2     
+	   7 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+Module DMA_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 3     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 43    
+	   8 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module dsDMA_Transact 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               36 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 65    
+Module DMA_Calculate__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     57 Bit       Adders := 1     
+	   2 Input     48 Bit       Adders := 6     
+	   3 Input     48 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 4     
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 8     
+	               48 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
+	               17 Bit    Registers := 5     
+	               13 Bit    Registers := 3     
+	               12 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 17    
+	   2 Input     33 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 2     
+	   7 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+Module DMA_FSM__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 3     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 43    
+	   8 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module usDMA_Transact 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	  13 Input      7 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+Module rx_Transact 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module tx_Mem_Reader 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               72 Bit    Registers := 1     
+	               64 Bit    Registers := 5     
+	               10 Bit    Registers := 3     
+	                1 Bit    Registers := 37    
++---Muxes : 
+	   2 Input     72 Bit        Muxes := 2     
+	   7 Input     64 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 9     
+	   2 Input     16 Bit        Muxes := 7     
+	   2 Input     10 Bit        Muxes := 7     
+	   5 Input     10 Bit        Muxes := 1     
+	  19 Input      7 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 25    
+	   4 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 12    
+Module Tx_Output_Arbitor 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module tx_Transact 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 5     
+	               64 Bit    Registers := 2     
+	               26 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 4     
+	  15 Input     64 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	  39 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	  15 Input     10 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  15 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 16    
+	  15 Input      1 Bit        Muxes := 19    
+Module Regs_Group 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 24    
+	               60 Bit    Registers := 4     
+	               32 Bit    Registers := 31    
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 76    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 28    
+	   2 Input     32 Bit        Muxes := 154   
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 110   
+Module tlpControl 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 4     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module ADC16BIT 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               73 Bit    Registers := 1     
+	               32 Bit    Registers := 15    
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+Module v6_pcie_v1_7_x4__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module eb_wrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.941 ; gain = 637.465
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1292.945 ; gain = 659.469
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1292.945 ; gain = 659.469
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\Regs_WrAddr_r1_reg[1] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Regs_WrAddr_r1_reg[0] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[55] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[54] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[38] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[37] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[35] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[34] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[31] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[28] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[19] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[9] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[8] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[7] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[6] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[5] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[3] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[2] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[1] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Lo_reg[0] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[55] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[54] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[38] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[37] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[35] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[34] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[31] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[28] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[19] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[9] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[8] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[7] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[6] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[5] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[3] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[2] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[1] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_WrMuxer_Hi_reg[0] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[32] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[31] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[30] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[29] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[20] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[11] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[9] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[7] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[5] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[3] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Lo_reg[1] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[32] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[31] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[30] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[29] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[20] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[11] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[9] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[7] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[5] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[3] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Reg_RdMuxer_Hi_reg[1] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[63] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[62] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[61] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[60] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[59] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[58] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[57] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[56] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[55] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[54] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[53] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[52] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[51] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[50] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[49] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[48] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[47] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[46] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[45] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[44] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[43] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[42] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[41] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[40] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[39] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[38] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[37] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[36] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[35] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[34] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[33] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\Last_Ctrl_Word_us_reg[32] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[63] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[62] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[61] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[60] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[59] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[58] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[57] ) is unused and will be removed from module Regs_Group.
+WARNING: [Synth 8-3332] Sequential element (\General_Control_i_reg[56] ) is unused and will be removed from module Regs_Group.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/\tx_Itf/us_DMA_Bytes_i_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/\tx_Itf/us_DMA_Bytes_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/\tx_Itf/us_DMA_Bytes_i_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\class_CTL_Status_i_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\eb_FIFO_Status_r1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\H2B_FIFO_Status_r1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\B2H_FIFO_Status_r1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\dlm_rd_r_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\ctl_td_r_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\Sys_Error_i_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (theTlpControli_2/Memory_Space/\DG_Status_i_reg[21] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1319.578 ; gain = 686.102
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1319.578 ; gain = 686.102
+Finished Parallel Section  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1319.578 ; gain = 686.102
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: Moved 10 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1373.582 ; gain = 740.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1380.578 ; gain = 747.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:55 ; elapsed = 00:01:56 . Memory (MB): peak = 1403.828 ; gain = 770.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin rx_np_req
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_mgmt_wr_readonly
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_atomic_egress_blocked
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_internal_cor
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_malformed
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_mc_blocked
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_poisoned
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_norecovery
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_acs
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_internal_uncor
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pm_halt_aspm_l0s
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pm_halt_aspm_l1
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pm_force_state_en
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pm_force_state[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pm_force_state[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_interrupt_stat
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pciecap_interrupt_msgnum[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pciecap_interrupt_msgnum[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pciecap_interrupt_msgnum[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pciecap_interrupt_msgnum[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_pciecap_interrupt_msgnum[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[127]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[126]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[125]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[124]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[123]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[122]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[121]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[120]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[119]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[118]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[117]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[116]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[115]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[114]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[113]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[112]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[111]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[110]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[109]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[108]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[107]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[106]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[105]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[104]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[103]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[102]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[101]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[100]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[99]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[98]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[97]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[96]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[95]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[94]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[93]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[92]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[91]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[90]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[89]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[88]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[87]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[86]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[85]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[84]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[83]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[82]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[81]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[80]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[79]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[78]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[77]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[76]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[75]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[74]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[73]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[72]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[71]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[70]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[69]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[68]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[67]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[66]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[65]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[64]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[63]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[62]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[61]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[60]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[59]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[58]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[57]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[56]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[55]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[54]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[53]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[52]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[51]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[50]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \make4Lanes.pcieCore/v7_pcie_i  has unconnected pin cfg_err_aer_headerlog[49]
+INFO: [Common 17-14] Message 'Synth 8-4442' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:01:57 . Memory (MB): peak = 1403.828 ; gain = 770.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:01:57 . Memory (MB): peak = 1403.828 ; gain = 770.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:01:58 . Memory (MB): peak = 1403.828 ; gain = 770.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|v6pcieDMA   | theTlpControl/rx_Itf/Upstream_DMA_Engine/usTlp_empty_r3_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------+----------+
+|      |BlackBox name              |Instances |
++------+---------------------------+----------+
+|1     |clk_wiz_0                  |         1|
+|2     |v6_eb_fifo_counted_resized |         1|
+|3     |pcie_7x_0                  |         1|
+|4     |v6_sfifo_15x128            |         3|
+|5     |v6_mBuf_128x72             |         1|
++------+---------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |clk_wiz_0_bbox                  |     1|
+|2     |pcie_7x_0_bbox                  |     1|
+|3     |v6_eb_fifo_counted_resized_bbox |     1|
+|4     |v6_mBuf_128x72_bbox             |     1|
+|5     |v6_sfifo_15x128_bbox            |     1|
+|6     |v6_sfifo_15x128_bbox_0          |     1|
+|7     |v6_sfifo_15x128_bbox_1          |     1|
+|8     |CARRY4                          |   280|
+|9     |IBUFDS_GTE2                     |     1|
+|10    |IDDR                            |    48|
+|11    |LUT1                            |   618|
+|12    |LUT2                            |  1157|
+|13    |LUT3                            |   476|
+|14    |LUT4                            |   939|
+|15    |LUT5                            |   649|
+|16    |LUT6                            |  2586|
+|17    |MUXCY_L                         |   249|
+|18    |MUXF7                           |    13|
+|19    |SRL16E                          |     1|
+|20    |XORCY                           |   256|
+|21    |FDCE                            |  4219|
+|22    |FDPE                            |   287|
+|23    |FDRE                            |  1084|
+|24    |FDSE                            |    52|
+|25    |IBUF                            |    51|
+|26    |IBUFG                           |     1|
+|27    |OBUF                            |     5|
++------+--------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------------+--------------------------------+------+
+|      |Instance                            |Module                          |Cells |
++------+------------------------------------+--------------------------------+------+
+|1     |top                                 |                                | 14021|
+|2     |  ADCMAIN                           |ADC16BIT                        |  1201|
+|3     |  \LoopBack_FIFO_Off.queue_buffer0  |eb_wrapper                      |   122|
+|4     |  \make4Lanes.pcieCore              |v6_pcie_v1_7_x4__parameterized0 |   564|
+|5     |  theTlpControl                     |tlpControl                      | 12072|
+|6     |    Memory_Space                    |Regs_Group                      |  3961|
+|7     |    rx_Itf                          |rx_Transact                     |  5864|
+|8     |      CplD_Channel                  |rx_CplD_Transact                |   473|
+|9     |      Downstream_DMA_Engine         |dsDMA_Transact                  |  1857|
+|10    |        ds_DMA_Calculation          |DMA_Calculate_0                 |  1064|
+|11    |        ds_DMA_StateMachine         |DMA_FSM_1                       |   434|
+|12    |      Intrpt_Handle                 |Interrupts                      |   383|
+|13    |      MRd_Channel                   |rx_MRd_Transact                 |   570|
+|14    |      MWr_Channel                   |rx_MWr_Transact                 |   302|
+|15    |      Rx_Input_Delays               |RxIn_Delay                      |   304|
+|16    |      Upstream_DMA_Engine           |usDMA_Transact                  |  1972|
+|17    |        us_DMA_Calculation          |DMA_Calculate                   |  1117|
+|18    |        us_DMA_StateMachine         |DMA_FSM                         |   410|
+|19    |    tx_Itf                          |tx_Transact                     |  2224|
+|20    |      ABB_Tx_MReader                |tx_Mem_Reader                   |   711|
+|21    |      O_Arbitration                 |Tx_Output_Arbitor               |   356|
++------+------------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:01:58 . Memory (MB): peak = 1403.828 ; gain = 770.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 154 critical warnings and 4540 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:01:58 . Memory (MB): peak = 1403.828 ; gain = 770.352
+INFO: [Netlist 29-17] Analyzing 885 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 65 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 64 instances
+  IBUFG => IBUF: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+232 Infos, 320 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1403.832 ; gain = 656.227
+# write_checkpoint v6pcieDMA.dcp
+# report_utilization -file v6pcieDMA_utilization_synth.rpt -pb v6pcieDMA_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1403.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 18 11:24:36 2015...

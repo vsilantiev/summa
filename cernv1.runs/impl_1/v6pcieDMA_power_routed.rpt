@@ -1,0 +1,451 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date             : Wed Feb 18 11:27:55 2015
+| Host             : ubuntu running 64-bit Ubuntu 12.04.5 LTS
+| Command          : report_power -file v6pcieDMA_power_routed.rpt -pb v6pcieDMA_power_summary_routed.pb
+| Design           : v6pcieDMA
+| Device           : xc7a200tfbg484-1
+| Design State     : Routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 1.145 |
+| Dynamic (W)              | 0.989 |
+| Device Static (W)        | 0.157 |
+| Effective TJA (C/W)      | 2.5   |
+| Max Ambient (C)          | 82.2  |
+| Junction Temperature (C) | 27.8  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.092 |       11 |       --- |             --- |
+| Slice Logic             |     0.040 |    15787 |       --- |             --- |
+|   LUT as Logic          |     0.036 |     6532 |    133800 |            4.88 |
+|   CARRY4                |     0.002 |      316 |     33450 |            0.94 |
+|   Register              |     0.002 |     7289 |    267600 |            2.72 |
+|   LUT as Shift Register |    <0.001 |      157 |     46200 |            0.33 |
+|   F7/F8 Muxes           |    <0.001 |       86 |    133800 |            0.06 |
+|   Others                |     0.000 |      511 |       --- |             --- |
+|   BUFG                  |     0.000 |        1 |        32 |            3.12 |
+| Signals                 |     0.050 |    12195 |       --- |             --- |
+| Block RAM               |     0.046 |       66 |       365 |           18.08 |
+| MMCM                    |     0.214 |        2 |        10 |           20.00 |
+| PCIE                    |     0.035 |        1 |         1 |          100.00 |
+| I/O                     |     0.036 |       76 |       285 |           26.66 |
+| GTP                     |     0.475 |        4 |       --- |             --- |
+| Static Power            |     0.157 |          |           |                 |
+| Total                   |     1.145 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.309 |       0.275 |      0.034 |
+| Vccaux    |       1.800 |     0.150 |       0.119 |      0.031 |
+| Vcco33    |       3.300 |     0.015 |       0.010 |      0.005 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.005 |       0.000 |      0.005 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       0.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.005 |       0.004 |      0.001 |
+| MGTAVcc   |       1.000 |     0.189 |       0.187 |      0.001 |
+| MGTAVtt   |       1.200 |     0.232 |       0.229 |      0.003 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.5                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.2                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                        | Domain                                                                                                    | Constraint (ns) |
++------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------+
+| CLK90_OUT_clk_wiz_0                                                                                                          | Inst_clckinvert/U0/CLK90_OUT_clk_wiz_0                                                                    |            10.0 |
+| CLK0_OUT_clk_wiz_0                                                                                                           | Inst_clckinvert/U0/CLK0_OUT_clk_wiz_0                                                                     |            10.0 |
+| clkfbout_clk_wiz_0                                                                                                           | Inst_clckinvert/U0/clkfbout_clk_wiz_0                                                                     |            10.0 |
+| userclk1                                                                                                                     | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1        |             4.0 |
+| clk_250mhz                                                                                                                   | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz      |             4.0 |
+| clk_125mhz                                                                                                                   | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz      |             8.0 |
+| mmcm_fb                                                                                                                      | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb         |            10.0 |
+| CLK100MHZ                                                                                                                    | CLK100MHZ                                                                                                 |            10.0 |
+| sys_clk_c                                                                                                                    | sys_clk                                                                                                   |            10.0 |
+| make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtp_channel.gtpe2_channel_i/TXOUTCLK | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/pipe_txoutclk_out |            10.0 |
++------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------------------------------------------------+-----------+
+| Name                                                                             | Power (W) |
++----------------------------------------------------------------------------------+-----------+
+| v6pcieDMA                                                                        |     0.989 |
+|   ADCMAIN                                                                        |     0.010 |
+|   Inst_clckinvert                                                                |     0.108 |
+|     U0                                                                           |     0.108 |
+|   LoopBack_FIFO_Off.queue_buffer0                                                |     0.013 |
+|     U0_B2H                                                                       |     0.013 |
+|       U0                                                                         |     0.013 |
+|         inst_fifo_gen                                                            |     0.013 |
+|           gconvfifo.rf                                                           |     0.013 |
+|             grf.rf                                                               |     0.013 |
+|               gntv_or_sync_fifo.gcx.clkx                                         |     0.002 |
+|                 gsync_stage[1].rd_stg_inst                                       |    <0.001 |
+|                 gsync_stage[1].wr_stg_inst                                       |    <0.001 |
+|                 gsync_stage[2].rd_stg_inst                                       |    <0.001 |
+|                 gsync_stage[2].wr_stg_inst                                       |    <0.001 |
+|               gntv_or_sync_fifo.gl0.rd                                           |     0.001 |
+|                 gras.gpe.rdpe                                                    |    <0.001 |
+|                 gras.grdc1.rdc                                                   |    <0.001 |
+|                 gras.rsts                                                        |    <0.001 |
+|                   c0                                                             |    <0.001 |
+|                   c1                                                             |    <0.001 |
+|                 grhf.rhf                                                         |    <0.001 |
+|                 rpntr                                                            |    <0.001 |
+|               gntv_or_sync_fifo.gl0.wr                                           |     0.002 |
+|                 gwas.gpf.wrpf                                                    |    <0.001 |
+|                 gwas.wsts                                                        |     0.001 |
+|                   c1                                                             |    <0.001 |
+|                   c2                                                             |    <0.001 |
+|                 wpntr                                                            |    <0.001 |
+|               gntv_or_sync_fifo.mem                                              |     0.007 |
+|                 gbm.gbmg.gbmga.ngecc.bmg                                         |     0.007 |
+|                   inst_blk_mem_gen                                               |     0.007 |
+|                     gnativebmg.native_blk_mem_gen                                |     0.007 |
+|                       valid.cstr                                                 |     0.007 |
+|                         has_mux_b.B                                              |     0.001 |
+|                         ramloop[0].ram.r                                         |     0.001 |
+|                           prim_noinit.ram                                        |     0.001 |
+|                         ramloop[10].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[11].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[12].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[13].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[14].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[15].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[16].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[17].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[18].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[19].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[1].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[20].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[21].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[22].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[23].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[24].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[25].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[26].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[27].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[28].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[29].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[2].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[30].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[31].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[32].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[33].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[34].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[35].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[36].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[37].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[38].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[39].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[3].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[40].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[41].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[42].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[43].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[44].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[45].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[46].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[47].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[48].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[49].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[4].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[50].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[51].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[52].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[53].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[54].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[55].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[56].ram.r                                        |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[5].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[6].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[7].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[8].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|                         ramloop[9].ram.r                                         |    <0.001 |
+|                           prim_noinit.ram                                        |    <0.001 |
+|               rstblk                                                             |    <0.001 |
+|   make4Lanes.pcieCore                                                            |     0.678 |
+|     v7_pcie_i                                                                    |     0.677 |
+|       U0                                                                         |     0.677 |
+|         inst                                                                     |     0.677 |
+|           gt_top_i                                                               |     0.591 |
+|             gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|             gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|             gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|             gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|             pipe_wrapper_i                                                       |     0.591 |
+|               gtp_pipe_reset.gtp_pipe_reset_i                                    |    <0.001 |
+|               pipe_clock_int.pipe_clock_i                                        |     0.109 |
+|               pipe_lane[0].gt_wrapper_i                                          |     0.131 |
+|               pipe_lane[0].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
+|               pipe_lane[0].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|               pipe_lane[0].pipe_eq.pipe_eq_i                                     |     0.000 |
+|               pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i |     0.001 |
+|                 qpll_drp_i                                                       |     0.001 |
+|                 qpll_wrapper_i                                                   |    <0.001 |
+|               pipe_lane[0].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[0].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[1].gt_wrapper_i                                          |     0.115 |
+|               pipe_lane[1].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
+|               pipe_lane[1].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|               pipe_lane[1].pipe_eq.pipe_eq_i                                     |     0.000 |
+|               pipe_lane[1].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[1].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[2].gt_wrapper_i                                          |     0.115 |
+|               pipe_lane[2].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
+|               pipe_lane[2].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|               pipe_lane[2].pipe_eq.pipe_eq_i                                     |     0.000 |
+|               pipe_lane[2].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[2].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[3].gt_wrapper_i                                          |     0.115 |
+|               pipe_lane[3].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
+|               pipe_lane[3].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|               pipe_lane[3].pipe_eq.pipe_eq_i                                     |     0.000 |
+|               pipe_lane[3].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[3].pipe_user_i                                           |    <0.001 |
+|               qpll_reset.qpll_reset_i                                            |    <0.001 |
+|           pcie_top_i                                                             |     0.086 |
+|             axi_basic_top_i                                                      |     0.004 |
+|               rx_inst                                                            |     0.003 |
+|                 rx_null_gen_inst                                                 |    <0.001 |
+|                 rx_pipeline_inst                                                 |     0.002 |
+|               tx_inst                                                            |     0.001 |
+|                 tx_pipeline_inst                                                 |    <0.001 |
+|                 xhdl12.tx_thrl_ctl_inst                                          |    <0.001 |
+|             pcie_7x_i                                                            |     0.082 |
+|               pcie_bram_top                                                      |     0.042 |
+|                 pcie_brams_rx                                                    |     0.021 |
+|                   brams[0].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[1].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[2].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[3].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                 pcie_brams_tx                                                    |     0.021 |
+|                   brams[0].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[1].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[2].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|                   brams[3].ram                                                   |     0.005 |
+|                     use_tdp.ramb36                                               |     0.005 |
+|   theTlpControl                                                                  |     0.143 |
+|     Memory_Space                                                                 |     0.041 |
+|     rx_Itf                                                                       |     0.076 |
+|       CplD_Channel                                                               |     0.004 |
+|       Downstream_DMA_Engine                                                      |     0.026 |
+|         DMA_DSP_Buffer                                                           |     0.004 |
+|           U0                                                                     |     0.004 |
+|             inst_fifo_gen                                                        |     0.004 |
+|               gconvfifo.rf                                                       |     0.004 |
+|                 grf.rf                                                           |     0.004 |
+|                   gntv_or_sync_fifo.gl1.lsshft                                   |     0.002 |
+|                     c0                                                           |    <0.001 |
+|                     c1                                                           |    <0.001 |
+|                     crd                                                          |    <0.001 |
+|                     gpf.wrpf                                                     |    <0.001 |
+|                     rsts                                                         |    <0.001 |
+|                     wsts                                                         |    <0.001 |
+|                   gntv_or_sync_fifo.mem                                          |     0.002 |
+|                     gsm.sm                                                       |     0.002 |
+|                       gsm1.sm1                                                   |     0.001 |
+|                   rstblk                                                         |    <0.001 |
+|         ds_DMA_Calculation                                                       |     0.011 |
+|         ds_DMA_StateMachine                                                      |     0.006 |
+|       Intrpt_Handle                                                              |     0.004 |
+|       MRd_Channel                                                                |     0.010 |
+|         pioCplD_Buffer                                                           |     0.004 |
+|           U0                                                                     |     0.004 |
+|             inst_fifo_gen                                                        |     0.004 |
+|               gconvfifo.rf                                                       |     0.004 |
+|                 grf.rf                                                           |     0.004 |
+|                   gntv_or_sync_fifo.gl1.lsshft                                   |     0.002 |
+|                     c0                                                           |    <0.001 |
+|                     c1                                                           |    <0.001 |
+|                     crd                                                          |    <0.001 |
+|                     gpf.wrpf                                                     |    <0.001 |
+|                     rsts                                                         |    <0.001 |
+|                     wsts                                                         |    <0.001 |
+|                   gntv_or_sync_fifo.mem                                          |     0.002 |
+|                     gsm.sm                                                       |     0.002 |
+|                       gsm1.sm1                                                   |     0.001 |
+|                   rstblk                                                         |    <0.001 |
+|       MWr_Channel                                                                |     0.001 |
+|       Rx_Input_Delays                                                            |     0.002 |
+|       Upstream_DMA_Engine                                                        |     0.030 |
+|         US_TLP_Buffer                                                            |     0.005 |
+|           U0                                                                     |     0.005 |
+|             inst_fifo_gen                                                        |     0.005 |
+|               gconvfifo.rf                                                       |     0.005 |
+|                 grf.rf                                                           |     0.005 |
+|                   gntv_or_sync_fifo.gl1.lsshft                                   |     0.002 |
+|                     c0                                                           |    <0.001 |
+|                     c1                                                           |    <0.001 |
+|                     crd                                                          |     0.001 |
+|                     gpe.rdpe                                                     |    <0.001 |
+|                     gpf.wrpf                                                     |    <0.001 |
+|                     rsts                                                         |    <0.001 |
+|                     wsts                                                         |    <0.001 |
+|                   gntv_or_sync_fifo.mem                                          |     0.003 |
+|                     gsm.sm                                                       |     0.003 |
+|                       gsm1.sm1                                                   |     0.001 |
+|                   rstblk                                                         |    <0.001 |
+|         us_DMA_Calculation                                                       |     0.015 |
+|         us_DMA_StateMachine                                                      |     0.006 |
+|     tx_Itf                                                                       |     0.025 |
+|       ABB_Tx_MBuffer                                                             |     0.002 |
+|         U0                                                                       |     0.002 |
+|           inst_fifo_gen                                                          |     0.002 |
+|             gconvfifo.rf                                                         |     0.002 |
+|               gbi.bi                                                             |     0.002 |
+|                 g7ser_birst.rstbt                                                |    <0.001 |
+|                 v7_bi_fifo.fblk                                                  |     0.002 |
+|                   gextw[1].gnll_fifo.inst_extd                                   |     0.002 |
+|                     gonep.inst_prim                                              |     0.002 |
+|       ABB_Tx_MReader                                                             |     0.008 |
+|       O_Arbitration                                                              |     0.001 |
++----------------------------------------------------------------------------------+-----------+
+
+
